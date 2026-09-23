@@ -1,0 +1,30 @@
+{
+  "name": "job-queue-system",
+  "version": "1.0.0",
+  "description": "Distributed job queue / task processing system — Redis-backed priority queueing, MongoDB-backed fenced distributed locking, Kafka event streaming, JWT auth, Docker Compose deployment.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "worker": "node src/worker/worker.js",
+    "consumer:analytics": "node src/kafka/consumers/analyticsConsumer.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "ioredis": "^6.0.0",
+    "jsonwebtoken": "^9.0.3",
+    "kafkajs": "^2.2.4",
+    "mongoose": "^9.9.5",
+    "swagger-jsdoc": "^6.3.0",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
